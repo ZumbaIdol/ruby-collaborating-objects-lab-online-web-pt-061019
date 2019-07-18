@@ -32,7 +32,7 @@ class Song
   #   new_instance
   
       artist, title = file_name.split(" -")
-      self.new.title
+      self.new(title).tap
    end
   
   
