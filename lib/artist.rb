@@ -45,11 +45,11 @@ class Artist
     end
   end
   
-  def self.create(name)
-    artist = self.new(name)
-    artist.save
-    artist
-  end
+  # def self.create(name)
+  #   artist = self.new(name)
+  #   artist.save
+  #   artist
+  # end
   
   # def self.find_or_create_by_name(name)
   #    (my_artist = self.find.all {|artist| artist.name == name}) ? my_artist : self.new(name)
