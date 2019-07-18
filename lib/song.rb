@@ -38,5 +38,5 @@ class Song
     artist.object = Artist.find_or_create_by_filename(file_name.split(" - ")[0])
     song.artist = artist.object
     song.artist = add_song(self)
-    
+  end
 end
