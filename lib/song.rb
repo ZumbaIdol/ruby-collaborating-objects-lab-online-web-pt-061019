@@ -31,7 +31,7 @@ class Song
   #   new_instance.artist.add_song(new_instance)
   #   new_instance
   
-      artist, title = file_name.split(" -")
+      artist, title = file_name.split(" - ")
       self.new(title).tap {|song|
       song.artist = Artist.find_or_create_by_name(artist)
       song.artist.add_song(song)
