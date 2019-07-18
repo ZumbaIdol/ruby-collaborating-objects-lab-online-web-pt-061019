@@ -30,7 +30,9 @@ class Song
   #   new_instance.artist_name = artist
   #   new_instance.artist.add_song(new_instance)
   #   new_instance
-  # end
+  
+  
+   end
   
   
 end
