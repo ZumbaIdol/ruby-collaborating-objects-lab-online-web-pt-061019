@@ -15,28 +15,20 @@ class Song
     @@all
   end
   
-#   def artist_name=(name)
-#     if self.artist.nil?
-#       self.artist = Artist.new(name)
-#     else
-#       self.artist.name = name
-#   end
-# end
+  def artist_name=(name)
+    if self.artist.nil?
+      self.artist = Artist.new(name)
+    else
+      self.artist.name = name
+   end
+ end
     
-  # def self.new_by_filename(file_name)
-  #   song = file_name.split(" - ")[1]
-  #   artist = file_name.split(" - ")[0]
-  #   new_instance = Song.new(song)
-  #   new_instance.artist_name = artist
-  #   new_instance.artist.add_song(new_instance)
-  #   new_instance
-  # end
-  
   def self.new_by_filename(file_name)
     song = file_name.split(" - ")[1]
-    song = Song.new(song)
-    artist.object = Artist.find_or_create_by_name(file_name.split(" - ")[0])
-    song.artist = artist.object
-    song.artist = add_song(self)
+    artist = file_name.split(" - ")[0]
+    new_instance = Song.new(song)
+    new_instance.artist_name = artist
+    new_instance.artist.add_song(new_instance)
+    new_instance
   end
 end
