@@ -31,7 +31,7 @@ class Song
   #   new_instance.artist.add_song(new_instance)
   #   new_instance
   
-  artist, title
+  artist, title = file_name.split(" -")
    end
   
   
